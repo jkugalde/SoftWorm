@@ -9,7 +9,7 @@ SWorm(SoftM* M1, SoftM* M2, SoftM* M3){
 _TAIL=M1;
 _BODY=M2;
 _HEAD=M3;
-_step=0;
+_step=5;
 };
 void setup();
 void forward();

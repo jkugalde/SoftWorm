@@ -1,6 +1,5 @@
 #ifndef SoftS_H
 #define SoftS_H
-
 #include <Arduino.h>
 
 class SoftS

@@ -53,6 +53,7 @@ void SWorm::steps(){
     _BODY->deflate();
     break;
   }
+  Serial.println(_step);
 }
 
 void SWorm::reset(){

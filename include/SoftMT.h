@@ -14,7 +14,7 @@ public:
         _timer = 0;
         _processtime = 0;
     }
-    void reset();
+    void setup();
     void loop();
     void inflate();
     void deflate();

@@ -2,6 +2,14 @@
 #include "SoftM.h"
 #include "Arduino.h"
 
+void SoftMT::setup()
+{
+    pinMode(_pin1, OUTPUT);
+    pinMode(_pin2, OUTPUT);
+    _state = idle;
+    _isDone = true;
+}
+
 void SoftMT::loop()
 {
 
@@ -37,7 +45,4 @@ void SoftMT::setTimes(unsigned long inft, unsigned long dift)
  _deflationtime=dift;
 }
 
-void SoftMT::reset(){
-    SoftMT::purge();
-    SoftMT::_idle();
-}
+

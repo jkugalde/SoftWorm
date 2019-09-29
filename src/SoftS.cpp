@@ -19,7 +19,8 @@ void SoftS::getData(unsigned long sampler)
         _lastvalue = _value;
         _value = analogRead(_pin);
         _timer = millis();
-        _derivative=(_lastvalue-_value)/_sampler;
+        _derivative=(float(_value-_lastvalue))/float(_sampler);
+        Serial.println(_derivative);
     }
 
 }
