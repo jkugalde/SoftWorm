@@ -36,3 +36,8 @@ void SoftMT::setTimes(unsigned long inft, unsigned long dift)
  _inflationtime=inft;
  _deflationtime=dift;
 }
+
+void SoftMT::reset(){
+    SoftMT::purge();
+    SoftMT::_idle();
+}

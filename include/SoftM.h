@@ -7,10 +7,14 @@ class SoftM
 {
 public:
     inline virtual void begin(){};
+    virtual void reset(){};
     void setup();
     void purge();
     boolean ready();
     void _idle();
+    virtual void inflate(){};
+    virtual void deflate(){};
+    virtual void loop();
     enum States
     {
         idle = 0,

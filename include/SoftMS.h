@@ -15,6 +15,7 @@ public:
     void loop();
     void inflate();
     void deflate();
+    void hold();
 
 private:
 

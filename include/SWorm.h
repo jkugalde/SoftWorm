@@ -5,16 +5,24 @@
 
 class SWorm{
 public:
-SWorm(SoftM* M1, SoftM* M2){
-_M1=M1;
-_M2=M2;
+SWorm(SoftM* M1, SoftM* M2, SoftM* M3){
+_TAIL=M1;
+_BODY=M2;
+_HEAD=M3;
+_step=0;
 };
+void setup();
 void forward();
 void backward();
-void idle();
+void loop();
+void _idle();
+void reset();
+void steps();
 private:
-SoftM*_M1;
-SoftM*_M2;
+SoftM* _TAIL;
+SoftM* _BODY;
+SoftM* _HEAD;
+byte _step;
 };
 
 #endif //SWorm_H
