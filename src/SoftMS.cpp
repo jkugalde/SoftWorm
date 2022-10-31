@@ -10,6 +10,7 @@ void SoftMS::setup()
     _state = idle;
     _isDone = true;
     _sensor->setup();
+    Serial.println("Setup Done");
 }
 
 void SoftMS::inflate()

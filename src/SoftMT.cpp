@@ -8,14 +8,17 @@ void SoftMT::setup()
     pinMode(_pin2, OUTPUT);
     _state = idle;
     _isDone = true;
+    Serial.println("Setup Done");
 }
 
 void SoftMT::loop()
 {
 
-    if (millis() - _timer >= _processtime && _isDone == false)
+    if (millis() - _timer >= _processtime && _isDone == true)
     {
         SoftMT::_idle();
+        _processtime=0;
+        Serial.println(_state);
     }
 }
 
