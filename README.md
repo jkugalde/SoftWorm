@@ -14,7 +14,7 @@ when i did this. Maybe i will add improvements on the part files and electronics
 
 ## Files
 
-- I am using the objects to program the robot. There are four classes here: the worm itself, a virtual soft muscle class, a time controlled muscle and a sensor controlled muscle, both inherits from the soft muscle class, in this way the robot program does not change, only the attached actuators.
+- I am using object oriented classes to program the robot. There are four classes here: the worm itself, a virtual soft muscle class, a time controlled muscle and a sensor controlled muscle, both inherits from the soft muscle class, in this way the robot program does not change, only the attached actuators.
 
 - The example in src is a time controlled worm moving forward.
 
