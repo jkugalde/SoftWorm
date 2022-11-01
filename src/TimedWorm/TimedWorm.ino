@@ -14,7 +14,6 @@ unsigned long headtimes[2] = {1000,1000};
 unsigned long bodytimes[2] = {1000,1000};
 unsigned long tailtimes[2] = {1000,1000};
 
-
 void setup() {
 
   head = new Timed_SM();

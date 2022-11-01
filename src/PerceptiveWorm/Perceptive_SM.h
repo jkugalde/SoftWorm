@@ -10,7 +10,7 @@ class Perceptive_SM: public SoftM{
   Perceptive_SM();
   ~Perceptive_SM();
   void SM_setup();
-  void assign_pin(int pins[3]);
+  void assign_pins(int pins[3]);
   void actuate();
   void inflate();
   void deflate();
@@ -34,6 +34,7 @@ class Perceptive_SM: public SoftM{
   float _ierror;
   float _lasterror;
   float _sensval;
+  float _lastsens;
   float _anchorval;
   float _touchpoint;
   float _steadyval;

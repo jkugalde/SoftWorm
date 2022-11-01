@@ -6,12 +6,13 @@ _timer=millis();
 _lasterror=0;
 _sensval=0;
 _ierror=0;
+_lastsens=5000;
 
 }
 
 Perceptive_SM::~Perceptive_SM(){}
 
-void Perceptive_SM::assign_pin(int pins[3]){
+void Perceptive_SM::assign_pins(int pins[3]){
 
 _pinC=pins[0];
 _pinV=pins[1];
@@ -48,6 +49,7 @@ void Perceptive_SM::actuate(){
 
   analogWrite(_pinC,_Cstate);
   digitalWrite(_pinV,_Vstate);
+  _lastsens=_sensval;
   _sensval=analogRead(_pinS)*5000.0/1023.0;
 
 }
@@ -92,6 +94,12 @@ void Perceptive_SM::hold(){
 
   PID(_anchorval);
   _Vstate=0;
+
+}
+
+float Perceptive_SM::slope(){
+
+  return _sensval-_lastsens;
 
 }
 
